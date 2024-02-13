@@ -6,5 +6,5 @@ interface SectionProps {
 
 export default function Section({ children }: SectionProps) {
 
-	return <div className='section'>{children}</div>;
+	return <div className='flex h-[900px] bg-indigo-600'>{children}</div>;
 }
