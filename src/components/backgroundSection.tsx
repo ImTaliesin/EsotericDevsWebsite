@@ -5,11 +5,19 @@ interface SectionProps {
 }
 
 export default function BackgroundSection({ children }: SectionProps) {
+	// Define a custom style for the gradient overlay
+	const gradientOverlayStyle = {
+	  background: 'linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8))',
+	};
+ 
 	return (
-		<div className='overflow-hidden'>
-			<SVGComponent className='w-full h-full absolute inset-0 z-1 blur-sm' />
-			{/* Content */}
-			<div className='relative z-10'>{children}</div>
-		</div>
+	  <div className='overflow-hidden'>
+		 <SVGComponent className='w-full h-full absolute inset-0 z-0' />
+		 {/* Gradient Overlay */}
+		 <div style={gradientOverlayStyle} className='w-full h-full absolute inset-0 z-10' />
+		 {/* Content */}
+		 <div className='relative z-20'>{children}</div>
+	  </div>
 	);
-}
+ }
+ 
