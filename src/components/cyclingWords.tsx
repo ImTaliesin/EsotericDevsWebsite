@@ -21,7 +21,7 @@ const cyclingWords = () => {
   }, []);
 
   return (
-    <span className={`transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'} text-3xl`}>
+    <span className={`transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'} text-xl`}>
       {words[currentWordIndex]}
     </span>
   );

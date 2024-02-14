@@ -17,7 +17,8 @@ export default function Header() {
 	const menuItems = ['About', 'Projects', 'Contact'];
 	return (
 		<Navbar
-			shouldHideOnScroll isBordered
+			shouldHideOnScroll
+			isBordered
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			className='flex'>
@@ -29,7 +30,9 @@ export default function Header() {
 				<NavbarItem className='justify-start flex '>
 					<Link href='#'>
 						<Avatar src={headshotUrl} />
-						<div className='p-3 align-middle justify-center text-large'>Brennan D.</div>
+						<div className='p-3 align-middle justify-center text-large'>
+							Brennan D.
+						</div>
 					</Link>
 				</NavbarItem>
 			</NavbarBrand>
