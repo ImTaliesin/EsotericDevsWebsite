@@ -11,17 +11,16 @@ import {
 	NavbarMenuItem,
 } from '@nextui-org/react';
 import { useState } from 'react';
-
+const headshotUrl = '/headshot.jpg';
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const menuItems = ['About', 'Projects', 'Contact'];
 	return (
 		<Navbar
-			shouldHideOnScroll
-			isBordered
+			shouldHideOnScroll isBordered
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='flex border-b border-gray-600 shadow shadow-gray-600'>
+			className='flex'>
 			<NavbarMenuToggle
 				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 				className='sm:hidden'
@@ -29,7 +28,7 @@ export default function Header() {
 			<NavbarBrand>
 				<NavbarItem className='justify-start flex '>
 					<Link href='#'>
-						<Avatar src='https://i.pravatar.cc/150?u=a042581f4e29026024d' />
+						<Avatar src={headshotUrl} />
 						<h3 className='p-3 align-middle justify-center'>Taliesin</h3>
 					</Link>
 				</NavbarItem>
@@ -46,11 +45,7 @@ export default function Header() {
 				{menuItems.map((item, index) => (
 					<NavbarMenuItem key={`${item}-${index}`}>
 						<Link
-							color={
-								
-									 'primary'
-									
-							}
+							color={'foreground'}
 							className='w-full'
 							href='#'
 							size='lg'>
