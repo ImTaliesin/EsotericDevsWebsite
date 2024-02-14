@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 
-const words = ['speed.', 'performance.', 'optimization.', 'efficiency.', 'security.'];
+const words = ['efficiency.',  'performance.', 'optimization.', 'responsiveness.', 'security.'];
 
 const cyclingWords = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -21,7 +21,7 @@ const cyclingWords = () => {
   }, []);
 
   return (
-    <span className={`transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'} text-xl`}>
+    <span className={`transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'} text-2xl`}>
       {words[currentWordIndex]}
     </span>
   );

@@ -14,20 +14,3 @@ Button {
 	font-family: 'League Spartan', sans-serif;
 }
 
-@media only screen and (max-width: 755em) {
-	html {
-		font-size: 200%;
-	}
-}
-
-@media only screen and (max-width: 565.255em) {
-	html {
-		font-size: 125%;
-	}
-}
-
-@media only screen and (min-width: 1125.5em) {
-	html {
-		font-size: 200%;
-	}
-}
