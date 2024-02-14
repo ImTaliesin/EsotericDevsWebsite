@@ -29,7 +29,7 @@ export default function Header() {
 				<NavbarItem className='justify-start flex '>
 					<Link href='#'>
 						<Avatar src={headshotUrl} />
-						<h3 className='p-3 align-middle justify-center'>Taliesin</h3>
+						<div className='p-3 align-middle justify-center text-large'>Brennan D.</div>
 					</Link>
 				</NavbarItem>
 			</NavbarBrand>
