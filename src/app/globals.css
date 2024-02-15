@@ -19,3 +19,8 @@ Button, a {
 	font-family: 'League Spartan', sans-serif;
 }
 
+@media (min-width: 640px) {
+	.sm\:hidden {
+	  display: none !important;
+	}
+ }

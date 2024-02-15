@@ -1,17 +1,15 @@
 import React from 'react';
 import BlurSection from '@/components/Small/blurSection';
-import { Chip } from '@nextui-org/react';
+import { Chip, Button } from '@nextui-org/react';
 
 const AboutMe = () => {
 	return (
 		<BlurSection>
 			{/* About Me Top Section */}
-			<div
-				id='about'
-				className='flex flex-col justify-center items-center px-4 py-16 rounded-5xl'>
+			<div  className='flex flex-col justify-center items-center px-4 my-16 rounded-5xl'>
 				<h1 className='font-sans text-4xl font-bold'>ABOUT ME</h1>
 				<div className='relative my-2 h-1 w-12 bg-violet-600 rounded-full'></div>
-				<p className='text-center max-w-2xl px-6'>
+				<p  className='text-center max-w-2xl px-6'>
 					Here you will find more information about me, what I do, and my
 					current skills mostly in terms of programming and technology.
 				</p>
@@ -34,6 +32,9 @@ const AboutMe = () => {
 							grow. If you have a good opportunity that matches my skills then
 							don't hesitate to contact me.
 						</p>
+						<Button className='w-52 py-6 bg-violet-700 text-white rounded text-2xl'>
+							Contact
+						</Button>
 					</div>
 				</div>
 				{/* Right Column*/}

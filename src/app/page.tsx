@@ -14,6 +14,7 @@ export default function Home() {
 					async
 				/>
 				<HeroSection />
+				<div id='about'></div>
 				<AboutMe />
 				<div className='m-16'></div>
 				<Projects />
