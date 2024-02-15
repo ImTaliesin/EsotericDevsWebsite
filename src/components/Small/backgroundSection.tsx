@@ -27,7 +27,7 @@ export default function BackgroundSection({ children }: SectionProps) {
 			<div
 				style={{
 					background:
-						'linear-gradient(rgba(245, 245, 245, 0.4), rgba(245, 245, 245, 0.9))',
+						'linear-gradient(rgba(245, 245, 245, 0.4), rgba(245, 245, 245, 0.7))',
 				}}
 				className='absolute w-full h-full inset-0 z-10'
 			/>
