@@ -1,9 +1,11 @@
-import EmptySection from '@/components/Small/emptySection';
-import BackgroundSection from '@/components/Small/backgroundSection';
+import EmptySection from '@/components/Small/whiteSection';
+import WhiteSection from '../Small/blurSection';
 export default function Projects() {
 	return (
 		<EmptySection>
-			<div className='flex justify-center items-center lg:h-[45vh] h-[55vh]'>Hello</div>
+			<div className='flex justify-center items-center lg:h-[45vh] h-[55vh]'>
+				Hello
+			</div>
 		</EmptySection>
 	);
 }

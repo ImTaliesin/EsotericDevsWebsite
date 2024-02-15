@@ -21,15 +21,15 @@ export default function BackgroundSection({ children }: SectionProps) {
 		<div className='relative '>
 			<SVGComponent
 				className='absolute w-full h-[110vh] inset-0 z-0'
-				style={{ transform: `translateY(${offsetY * .8 }px)` }} // Adjust the rate here
+				style={{ transform: `translateY(${offsetY * .7}px)` }} // Adjust the rate here
 			/>
 			{/* Gradient Overlay */}
 			<div
 				style={{
 					background:
-						'linear-gradient(rgba(245, 245, 245, 0.4), rgba(245, 245, 245, 0.8))',
+						'linear-gradient(rgba(245, 245, 245, 0.2), rgba(245, 245, 245, 0.6))',
 				}}
-				className='absolute w-full h-full inset-0 z-10'
+				className='fixed w-full h-fill inset-0 z-10'
 			/>
 			{/* Content */}
 			<div className='relative z-20'>{children}</div>
