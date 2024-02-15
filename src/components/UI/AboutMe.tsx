@@ -1,10 +1,10 @@
 import React from 'react';
-import EmptySection from '@/components/Small/emptySection';
+import WhiteSection from '@/components/Small/whiteSection';
 import { Chip } from '@nextui-org/react';
 
 const AboutMe = () => {
 	return (
-		<EmptySection>
+		<WhiteSection>
 			{/* About Me Top Section */}
 			<div className='flex flex-col justify-center items-center px-4 py-16 '>
 				<h1 className='font-sans text-4xl font-bold'>ABOUT ME</h1>
@@ -54,7 +54,7 @@ const AboutMe = () => {
 				</div>
 			</div>
 			<div className='mb-24'></div>
-		</EmptySection>
+		</WhiteSection>
 	);
 };
 

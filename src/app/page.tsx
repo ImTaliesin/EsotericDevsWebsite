@@ -1,6 +1,7 @@
 import AboutMe from '@/components/UI/AboutMe';
 import HeroSection from '@/components/UI/Hero';
 import Script from 'next/script';
+import Projects from '@/components/UI/Projects';
 
 export default function Home() {
 	return (
@@ -12,6 +13,7 @@ export default function Home() {
 			/>
 			<HeroSection />
 			<AboutMe />
+			<Projects/>
 		</div>
 	);
 }
