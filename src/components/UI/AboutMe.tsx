@@ -6,9 +6,9 @@ const AboutMe = () => {
   return (
     <EmptySection>
       {/* About Me Top Section */}
-      <div className='flex flex-col justify-center items-center min-h-[25vh] px-4'>
-        <h1 className='text-2xl font-semibold'>About Me</h1>
-        <div className='relative my-2 h-1 w-24 bg-violet-600 rounded-full'></div>
+      <div className='flex flex-col justify-center items-center px-4 py-16'>
+        <h1 className='font-sans text-4xl font-bold'>ABOUT ME</h1>
+        <div className='relative my-2 h-1 w-12 bg-violet-600 rounded-full'></div>
         <p className='text-center max-w-2xl px-6'>
           Here you will find more information about me, what I do, and my
           current skills mostly in terms of programming and technology.
@@ -18,8 +18,8 @@ const AboutMe = () => {
       <div className='max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 mb-10 px-4'>
         {/* Left Column*/}
         <div className='flex flex-col justify-center items-center space-y-4'>
-          <h1 className='font-bold text-center justify-top text-2xl'>Get to know me!</h1>
-          <div className='text-center space-y-4'>
+          <h1 className='font-bold text-center justify-top text-2xl '>Get to know me!</h1>
+          <div className='text-center space-y-4 max-w-xl'>
             <p>
               I'm a Full Stack Web Developer building Websites
               and Web Applications that leads to the success of your
@@ -37,8 +37,8 @@ const AboutMe = () => {
         </div>
         {/* Right Column*/}
         <div className='flex flex-col items-center justify-self-center justify-top space-y-4 max-w-md'>
-          <div className='font-bold text-center'>My Skills</div>
-          <div className='flex flex-wrap justify-center items-center gap-2'>
+          <div className='font-bold text-center text-2xl pt-6 lg:pt-0'>My Skills</div>
+          <div className='flex flex-wrap justify-center items-center gap-2 max-w-sm'>
             <Chip className='bg-gray-200 text-black rounded-lg'>HTML</Chip>
             <Chip className='bg-gray-200 text-black rounded-lg'>CSS</Chip>
             <Chip className='bg-gray-200 text-black rounded-lg'>JavaScript</Chip>
