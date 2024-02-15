@@ -7,7 +7,15 @@ interface SectionProps {
 export default function emptySection({ children}: SectionProps) {
 	return (
 		<div className='relative overflow-hidden'>
-			<div className='w-full h-full absolute inset-0 z-0 blur-sm' />
+			<div className='w-full h-full absolute inset-0 z-0 blur-sm bg-transparent' />
+			{/* Gradient Overlay */}
+			<div
+				style={{
+					background:
+						'linear-gradient(rgba(245, 245, 245, 0.2), rgba(245, 245, 245, 0.3))',
+				}}
+				className='absolute w-full h-full inset-0 z-10'
+			/>
 			{/* Content */}
 			<div className='relative z-10'>{children}</div>
 		</div>

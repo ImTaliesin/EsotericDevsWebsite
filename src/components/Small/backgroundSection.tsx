@@ -18,16 +18,16 @@ export default function BackgroundSection({ children }: SectionProps) {
 	}, []);
 
 	return (
-		<div className='relative overflow-hidden'>
+		<div className='relative '>
 			<SVGComponent
-				className='absolute w-full h-full inset-0 z-0'
+				className='absolute w-full h-[110vh] inset-0 z-0'
 				style={{ transform: `translateY(${offsetY * .8 }px)` }} // Adjust the rate here
 			/>
 			{/* Gradient Overlay */}
 			<div
 				style={{
 					background:
-						'linear-gradient(rgba(245, 245, 245, 0.4), rgba(245, 245, 245, 0.7))',
+						'linear-gradient(rgba(245, 245, 245, 0.4), rgba(245, 245, 245, 0.8))',
 				}}
 				className='absolute w-full h-full inset-0 z-10'
 			/>
