@@ -9,6 +9,7 @@ import {
 	Avatar,
 	Link,
 	NavbarMenuItem,
+	Chip,
 } from '@nextui-org/react';
 import { useState } from 'react';
 const headshotUrl = '/headshot.jpg';
@@ -21,7 +22,7 @@ export default function Header() {
 			isBordered
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='flex'>
+			className='flex py-3 justify-items-center'>
 			<NavbarMenuToggle
 				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 				className='sm:hidden'
@@ -38,10 +39,10 @@ export default function Header() {
 			</NavbarBrand>
 			<NavbarContent
 				justify='end'
-				className='hidden sm:flex gap-12'>
-				<NavbarItem>About</NavbarItem>
-				<NavbarItem>Projects</NavbarItem>
-				<NavbarItem>Contact</NavbarItem>
+				className='hidden sm:flex gap-10'>
+				<NavbarItem><Chip color='secondary' ><a href="#about" className='text-white px-1 text-medium '>About</a></Chip></NavbarItem>
+				<NavbarItem><Chip color='secondary' ><a href="projects" className='text-white px-1 text-medium '>Projects</a></Chip></NavbarItem>
+				<NavbarItem><Chip color='secondary' ><a href="contact" className='text-white px-1 text-medium '>Contact</a></Chip></NavbarItem>
 			</NavbarContent>
 
 			<NavbarMenu>

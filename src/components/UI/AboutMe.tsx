@@ -6,7 +6,9 @@ const AboutMe = () => {
 	return (
 		<BlurSection>
 			{/* About Me Top Section */}
-			<div className='flex flex-col justify-center items-center px-4 py-16 rounded-5xl'>
+			<div
+				id='about'
+				className='flex flex-col justify-center items-center px-4 py-16 rounded-5xl'>
 				<h1 className='font-sans text-4xl font-bold'>ABOUT ME</h1>
 				<div className='relative my-2 h-1 w-12 bg-violet-600 rounded-full'></div>
 				<p className='text-center max-w-2xl px-6'>
@@ -40,14 +42,30 @@ const AboutMe = () => {
 						My Skills
 					</div>
 					<div className='flex flex-wrap justify-center items-center gap-2 max-w-sm '>
-						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>HTML</Chip>
-						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>CSS</Chip>
-						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>JavaScript</Chip>
-						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>ReactJS</Chip>
-						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>NextJS</Chip>
-						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>GIT</Chip>
-						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>Github</Chip>
-						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>SEO</Chip>
+						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>
+							HTML
+						</Chip>
+						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>
+							CSS
+						</Chip>
+						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>
+							JavaScript
+						</Chip>
+						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>
+							ReactJS
+						</Chip>
+						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>
+							NextJS
+						</Chip>
+						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>
+							GIT
+						</Chip>
+						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>
+							Github
+						</Chip>
+						<Chip className='bg-gray-200 text-black rounded-lg text-xl px-2 py-4'>
+							SEO
+						</Chip>
 					</div>
 				</div>
 			</div>

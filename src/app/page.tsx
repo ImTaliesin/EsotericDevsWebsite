@@ -15,6 +15,7 @@ export default function Home() {
 				/>
 				<HeroSection />
 				<AboutMe />
+				<div className='m-16'></div>
 				<Projects />
 			
 		</div>

@@ -4,14 +4,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
-h1, h3, p, a, div {
+h1, h3, p, div {
 	font-family: 'Playfair Display';
 	font-style: normal;
 	font-variant: normal;
 	color: black;
 }
 
-Button  {
+Button, a {
 	font-family: 'League Spartan', sans-serif;
 }
 
