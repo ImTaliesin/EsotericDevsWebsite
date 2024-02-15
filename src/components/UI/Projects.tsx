@@ -4,7 +4,7 @@ export default function Projects() {
 	return (
 		<EmptySection>
 			<div className='flex justify-center items-center lg:h-[45vh] h-[55vh]'>
-				Hello
+				Projects
 			</div>
 		</EmptySection>
 	);

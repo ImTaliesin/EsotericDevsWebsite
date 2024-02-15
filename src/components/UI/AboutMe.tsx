@@ -21,8 +21,8 @@ const AboutMe = () => {
 					<h1 className='font-bold text-center justify-top text-3xl '>
 						Get to know me!
 					</h1>
-					<div className='text-center space-y-4 max-w-xl text-xl px-4'>
-						<p className='px-2'>
+					<div className='text-center space-y-4 max-w-xl text-xl mx-4'>
+						<p>
 							I'm a Full Stack Web Developer building Websites and Web
 							Applications that leads to the success of your product and
 							business. Check out some of my work in the Projects section.
