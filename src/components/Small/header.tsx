@@ -35,10 +35,10 @@ export default function Header() {
 			isBordered
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='flex py-3 justify-items-center'>
+			className='flex py-3 justify-items-center text-black'>
 			<NavbarMenuToggle
 				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-				className='sm:hidden'
+				className='sm:hidden '
 			/>
 			<NavbarBrand>
 				<NavbarItem className='justify-start flex '>
@@ -82,12 +82,12 @@ export default function Header() {
 
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
-					<NavbarMenuItem key={`${item}-${index}`}>
+					<NavbarMenuItem key={`${item}-${index}`}className="mt-6">
 						{/* Assuming the menu items are supposed to link to sections on the page, similar handling as above */}
 						<a
 							href={`#${item.toLowerCase()}`}
 							onClick={(e) => handleAnchorClick(e, item.toLowerCase())}
-							className='w-full text-white'
+							className='w-full text-black'
 							style={{ cursor: 'pointer' }}>
 							{item}
 						</a>
