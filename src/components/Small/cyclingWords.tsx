@@ -14,8 +14,8 @@ const cyclingWords = () => {
       setTimeout(() => {
         setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
         setFade(true);
-      }, 500); 
-    }, 2200); 
+      }, 300); 
+    }, 1900); 
 
     return () => clearInterval(intervalId);
   }, []);
