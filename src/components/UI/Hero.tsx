@@ -7,7 +7,7 @@ const HeroSection = () => {
 	return (
 		<div className='z-55 relative flex justify-center items-center lg:h-[80vh] h-[55vh]'>
 			<div className='flex flex-col items-center justify-center m-auto space-y-4 text-black max-w-xl px-4'>
-				<h1 className='text-6xl font-extrabold text-center'>
+				<h1 className='text-6xl pb-1 font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-br from-violet-800 to-cyan-400'>
 					Hey, I'm Brennan
 				</h1>
 				<p className='text-center text-2xl p-4'>
@@ -20,7 +20,7 @@ const HeroSection = () => {
 					</b>
 					with a flair for <i>design</i> and <CyclingWordsWords />
 				</p>
-				<Button className='w-52 py-6 bg-violet-700 text-white rounded text-2xl'>
+				<Button className='w-52 py-6 ring-2 ring-cyan-400 bg-violet-700 text-white rounded text-2xl'>
 					Projects
 				</Button>
 			</div>
