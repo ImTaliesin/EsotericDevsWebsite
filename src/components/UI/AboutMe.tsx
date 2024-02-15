@@ -15,10 +15,10 @@ const AboutMe = () => {
         </p>
       </div>
       {/* Below About Me Two Columns*/}
-      <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 mb-10 px-4'>
+      <div className='max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 mb-10 px-4'>
         {/* Left Column*/}
         <div className='flex flex-col justify-center items-center space-y-4'>
-          <div className='font-bold text-center justify-top '>Get to know me!</div>
+          <h1 className='font-bold text-center justify-top text-2xl'>Get to know me!</h1>
           <div className='text-center space-y-4'>
             <p>
               I'm a Full Stack Web Developer building Websites
@@ -36,7 +36,7 @@ const AboutMe = () => {
           </div>
         </div>
         {/* Right Column*/}
-        <div className='flex flex-col items-center justify-top space-y-4 max-w-md'>
+        <div className='flex flex-col items-center justify-self-center justify-top space-y-4 max-w-md'>
           <div className='font-bold text-center'>My Skills</div>
           <div className='flex flex-wrap justify-center items-center gap-2'>
             <Chip className='bg-gray-200 text-black rounded-lg'>HTML</Chip>
