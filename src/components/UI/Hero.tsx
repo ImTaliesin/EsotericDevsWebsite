@@ -20,7 +20,7 @@ const HeroSection = () => {
 					</b>
 					with a flair for <i>design</i> and <CyclingWordsWords />
 				</p>
-				<Button className='w-52 py-6 ring-2 ring-in-400 bg-violet-700 text-white rounded text-2xl'>
+				<Button className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'>
 					Projects
 				</Button>
 			</div>

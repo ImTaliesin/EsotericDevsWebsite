@@ -8,7 +8,7 @@ const Background = () => {
   const handleScroll = () => {
     // Calculate the offset based on the current scroll position and a parallax speed factor.
     // The window.pageYOffset provides the number of pixels the document is currently scrolled along the vertical axis.
-    const parallaxSpeed = 0.2; // Adjust this value to control the speed of the parallax effect
+    const parallaxSpeed = 0.25; // Adjust this value to control the speed of the parallax effect
     setOffsetY(window.pageYOffset * parallaxSpeed);
   };
 
@@ -24,10 +24,10 @@ const Background = () => {
         style={{
           transform: `translateY(${offsetY}px)`, // Apply the dynamic offset here
           position: 'absolute', // Changed from static to absolute to ensure it moves with the background
-          top: '-10%', // Start with the SVG slightly off-screen
+          top: '-30%', // Start with the SVG slightly off-screen
           left: '-10%',
           width: '120%', // Ensure the SVG is larger than the viewport
-          height: '120%',
+          height: '140%',
         }}
       >
         <SVGComponent className='w-full h-full object-cover' />
