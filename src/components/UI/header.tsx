@@ -9,6 +9,7 @@ import {
 	Avatar,
 	NavbarMenuItem,
 } from '@nextui-org/react';
+
 import { useState } from 'react';
 
 const headshotUrl = '/headshot.jpg';
@@ -47,9 +48,9 @@ export default function Header() {
 						className='align-middle flex justify-center'
 						onClick={(e) => handleAnchorClick(e, 'Home')}>
 						<Avatar src={headshotUrl} />
-						<div className='p-3 align-middle flex justify-center text-black text-large'>
+						<h2 className='p-2 align-middle flex justify-center text-black dark:text-white text-large'>
 							Brennan D.
-						</div>
+						</h2>
 					</a>
 				</NavbarItem>
 			</NavbarBrand>

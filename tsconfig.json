@@ -21,6 +21,7 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@public/*": ["./public/*"],
+      "@/app/*": ["./src/app/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/fancybackground.jsx"],

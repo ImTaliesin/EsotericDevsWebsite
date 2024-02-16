@@ -4,14 +4,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
-h1, h3, p, div {
+h1,h2,
+h3,
+p,
+div {
 	font-family: 'Playfair Display';
 	font-style: normal;
 	font-variant: normal;
-	color: black;
+	color: black; /* Light mode color */
 }
 
-Button, a {
+.dark h1,
+.dark h3,
+.dark p,
+.dark div {
+	color: black; /* Dark mode color */
+}
+
+
+Button,
+a {
 	font-family: 'League Spartan', sans-serif;
 }
 
@@ -21,6 +33,6 @@ Button, a {
 
 @media (min-width: 640px) {
 	.sm\:hidden {
-	  display: none !important;
+		display: none !important;
 	}
- }
+}
