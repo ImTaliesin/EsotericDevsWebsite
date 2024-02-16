@@ -7,7 +7,7 @@ interface SectionProps {
 export default function WhiteSection({ children}: SectionProps) {
 	return (
 		<div className='relative overflow-hidden'>
-			<div className='w-full h-full absolute inset-0 z-0 blur-sm bg-white my-20' />
+			<div className='w-[70vw] h-full absolute inset-0 z-0 blur-sm bg-neutral-100 my-20' />
 			{/* Gradient Overlay */}
 			<div
 				style={{
