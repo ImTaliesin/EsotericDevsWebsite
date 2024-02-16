@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import SVGComponent from './svgComponent';
+import SVGComponent from './SVGComponent';
 
 const Background = () => {
   const [offsetY, setOffsetY] = useState(0);

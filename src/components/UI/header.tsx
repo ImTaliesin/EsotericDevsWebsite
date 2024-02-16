@@ -9,7 +9,7 @@ import {
 	Avatar,
 	NavbarMenuItem,
 } from '@nextui-org/react';
-
+import DarkModeToggle from '@/components/UI/DarkMode';
 import { useState } from 'react';
 
 const headshotUrl = '/headshot.jpg';
@@ -36,7 +36,7 @@ export default function Header() {
 			isBordered
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='flex py-3 justify-items-center text-black'>
+			className='flex py-3 justify-items-center dark:bg-neutral-950/95 text-black'>
 			<NavbarMenuToggle
 				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 				className='sm:hidden '
@@ -87,6 +87,10 @@ export default function Header() {
 							Contact
 						</a>
 					</button>
+				</NavbarItem><NavbarItem>
+					
+					<DarkModeToggle/>
+					
 				</NavbarItem>
 			</NavbarContent>
 

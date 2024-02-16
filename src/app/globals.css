@@ -18,7 +18,7 @@ div {
 .dark h3,
 .dark p,
 .dark div {
-	color: black; /* Dark mode color */
+	color: lightgray; /* Dark mode color */
 }
 
 

@@ -10,7 +10,7 @@ interface ProvidersProps {
 export default function Providers({ children }: ProvidersProps) {
   return (
     // Nest NextUIProvider inside ThemeProvider
-    <ThemeProvider attribute="class" enableSystem={true} defaultTheme="light">
+    <ThemeProvider attribute="class" enableSystem={true} defaultTheme="system">
       <NextUIProvider>
         {children}
       </NextUIProvider>
