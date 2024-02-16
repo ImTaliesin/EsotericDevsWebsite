@@ -7,7 +7,6 @@ import {
 	NavbarContent,
 	NavbarItem,
 	Avatar,
-	Link,
 	NavbarMenuItem,
 } from '@nextui-org/react';
 import { useState } from 'react';
@@ -20,6 +19,8 @@ export default function Header() {
 
 	const handleAnchorClick = (e: any, anchorId: string) => {
 		e.preventDefault();
+		// Close the menu
+		setIsMenuOpen(false);
 		const element = document.getElementById(anchorId);
 		if (element) {
 			window.scrollTo({
@@ -41,7 +42,10 @@ export default function Header() {
 			/>
 			<NavbarBrand>
 				<NavbarItem className='justify-start flex '>
-					<a style={{ cursor: 'pointer' }} className='align-middle flex justify-center' onClick={(e) => handleAnchorClick(e, 'Home')}>
+					<a
+						style={{ cursor: 'pointer' }}
+						className='align-middle flex justify-center'
+						onClick={(e) => handleAnchorClick(e, 'Home')}>
 						<Avatar src={headshotUrl} />
 						<div className='p-3 align-middle flex justify-center text-black text-large'>
 							Brennan D.
@@ -87,7 +91,6 @@ export default function Header() {
 					<NavbarMenuItem
 						key={`${item}-${index}`}
 						className='mt-6'>
-						{/* Assuming the menu items are supposed to link to sections on the page, similar handling as above */}
 						<a
 							href={`#${item.toLowerCase()}`}
 							onClick={(e) => handleAnchorClick(e, item.toLowerCase())}
