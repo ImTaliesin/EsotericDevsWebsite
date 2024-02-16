@@ -9,7 +9,6 @@ import {
 	Avatar,
 	Link,
 	NavbarMenuItem,
-	Chip,
 } from '@nextui-org/react';
 import { useState } from 'react';
 
@@ -17,7 +16,7 @@ const headshotUrl = '/headshot.jpg';
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const menuItems = ['About', 'Projects', 'Contact'];
+	const menuItems = ['About', 'Projects', 'Contact', 'Home'];
 
 	const handleAnchorClick = (e: any, anchorId: string) => {
 		e.preventDefault();
@@ -42,12 +41,12 @@ export default function Header() {
 			/>
 			<NavbarBrand>
 				<NavbarItem className='justify-start flex '>
-					<Link href='/'>
+					<a style={{ cursor: 'pointer' }} className='align-middle flex justify-center' onClick={(e) => handleAnchorClick(e, 'Home')}>
 						<Avatar src={headshotUrl} />
-						<div className='p-3 align-middle justify-center text-large'>
+						<div className='p-3 align-middle flex justify-center text-black text-large'>
 							Brennan D.
 						</div>
-					</Link>
+					</a>
 				</NavbarItem>
 			</NavbarBrand>
 			<NavbarContent
@@ -85,7 +84,9 @@ export default function Header() {
 
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
-					<NavbarMenuItem key={`${item}-${index}`}className="mt-6">
+					<NavbarMenuItem
+						key={`${item}-${index}`}
+						className='mt-6'>
 						{/* Assuming the menu items are supposed to link to sections on the page, similar handling as above */}
 						<a
 							href={`#${item.toLowerCase()}`}
