@@ -34,13 +34,13 @@ const Background = () => {
 			{/* Gradient Overlay remains unchanged */}
 			<div
 				style={{
-					position: 'absolute',
+					position: 'relative',
 					top: 0,
 					left: 0,
 					width: '100%',
 					height: '100%',
 					background:
-						'linear-gradient(rgba(245, 245, 245, 0.4), rgba(245, 245, 245, 0.8))',
+						'linear-gradient(rgba(245, 245, 245, 0.55), rgba(245, 245, 245, 1))',
 				}}></div>
 		</div>
 	);

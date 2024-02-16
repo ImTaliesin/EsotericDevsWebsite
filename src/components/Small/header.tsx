@@ -58,15 +58,17 @@ export default function Header() {
 					<a
 						href='#about'
 						onClick={(e) => handleAnchorClick(e, 'about')}
-						className='ring-2 ring-cyan-300/[.75] text-white px-5 py-2 rounded-3xl bg-violet-700 text-medium '>
+						className='shadow-gray-600 shadow-md
+						 text-white px-5 py-2 rounded-3xl bg-violet-700 text-medium '>
 						About
 					</a>
 				</NavbarItem>
 				<NavbarItem>
 					<a
-						href='#projects'
-						onClick={(e) => handleAnchorClick(e, 'projects')}
-						className='ring-2 ring-cyan-300/[.75] text-white px-5 py-2 rounded-3xl bg-violet-700 text-medium '>
+						href='#Projects'
+						onClick={(e) => handleAnchorClick(e, 'Projects')}
+						className='shadow-gray-600 shadow-md
+						 text-white px-5 py-2 rounded-3xl bg-violet-700 text-medium '>
 						Projects
 					</a>
 				</NavbarItem>
@@ -74,7 +76,8 @@ export default function Header() {
 					<a
 						href='#contact'
 						onClick={(e) => handleAnchorClick(e, 'contact')}
-						className='ring-2 ring-cyan-300/[.75] text-white px-5 py-2 rounded-3xl bg-violet-700 text-medium '>
+						className='shadow-gray-600 shadow-md
+						 text-white px-5 py-2 rounded-3xl bg-violet-700 text-medium '>
 						Contact
 					</a>
 				</NavbarItem>

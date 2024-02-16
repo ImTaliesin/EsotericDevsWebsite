@@ -16,7 +16,7 @@ export default function Home() {
 				<HeroSection />
 				<div id='about'></div>
 				<AboutMe />
-				<div className='m-16'></div>
+				<div id='Projects' className='m-16'></div>
 				<Projects />
 			
 		</div>

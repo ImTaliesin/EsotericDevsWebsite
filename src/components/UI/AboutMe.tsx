@@ -32,7 +32,7 @@ const AboutMe = () => {
 							grow. If you have a good opportunity that matches my skills then
 							don't hesitate to contact me.
 						</p>
-						<Button className='w-52 py-6 ring-2 ring-cyan-400/[.75] bg-violet-700 text-white rounded text-2xl'>
+						<Button className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'>
 							Contact
 						</Button>
 					</div>
