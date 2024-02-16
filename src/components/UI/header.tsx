@@ -59,31 +59,34 @@ export default function Header() {
 				className='hidden sm:flex gap-10'>
 				{/* Modified NavbarItems to use onClick for custom scroll behavior */}
 				<NavbarItem>
-					<a
-						href='#about'
-						onClick={(e) => handleAnchorClick(e, 'about')}
-						className='shadow-gray-600 shadow-md
-						 text-white px-5 py-2 rounded-3xl bg-violet-700 text-medium '>
-						About
-					</a>
+					<button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
+						<a
+							href='#about'
+							className='relative z-10'
+							onClick={(e) => handleAnchorClick(e, 'about')}>
+							About
+						</a>
+					</button>
 				</NavbarItem>
 				<NavbarItem>
-					<a
-						href='#Projects'
-						onClick={(e) => handleAnchorClick(e, 'Projects')}
-						className='shadow-gray-600 shadow-md
-						 text-white px-5 py-2 rounded-3xl bg-violet-700 text-medium '>
-						Projects
-					</a>
+					<button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
+						<a
+							href='#Projects'
+							className='relative z-10'
+							onClick={(e) => handleAnchorClick(e, 'about')}>
+							Projects
+						</a>
+					</button>
 				</NavbarItem>
 				<NavbarItem>
-					<a
-						href='#contact'
-						onClick={(e) => handleAnchorClick(e, 'contact')}
-						className='shadow-gray-600 shadow-md
-						 text-white px-5 py-2 rounded-3xl bg-violet-700 text-medium '>
-						Contact
-					</a>
+					<button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
+						<a
+							href='#Contact'
+							className='relative z-10'
+							onClick={(e) => handleAnchorClick(e, 'about')}>
+							Contact
+						</a>
+					</button>
 				</NavbarItem>
 			</NavbarContent>
 
