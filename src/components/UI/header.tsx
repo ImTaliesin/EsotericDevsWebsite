@@ -32,7 +32,7 @@ export default function Header() {
 	};
 
 	return (
-		<Navbar
+		<Navbar 
 			isBordered
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
@@ -87,10 +87,9 @@ export default function Header() {
 							Contact
 						</a>
 					</button>
-				</NavbarItem><NavbarItem>
-					
-					<DarkModeToggle/>
-					
+				</NavbarItem>
+				<NavbarItem>
+					<DarkModeToggle />
 				</NavbarItem>
 			</NavbarContent>
 
@@ -108,6 +107,9 @@ export default function Header() {
 						</a>
 					</NavbarMenuItem>
 				))}
+				<NavbarItem>
+					<DarkModeToggle />
+				</NavbarItem>
 			</NavbarMenu>
 		</Navbar>
 	);
