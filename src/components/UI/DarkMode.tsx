@@ -22,7 +22,7 @@ export default function DarkModeToggle() {
   const ThemeIcon = theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches) ? <SunIcon /> : <MoonIcon />;
   
   return (
-    <button onClick={toggleTheme} className='relative flex justify-center items-center h-10 w-16 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 hover:text-white hover:shadow-violet-700'>
+    <button onClick={toggleTheme} className='relative flex justify-center items-center h-10 w-16 overflow-hidden transition-all duration-200 hover:text-white hover:shadow-violet-700'>
       <span className='relative z-10'>
         {ThemeIcon}
       </span>
