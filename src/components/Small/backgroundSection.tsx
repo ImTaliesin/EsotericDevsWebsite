@@ -1,41 +1,52 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 import SVGComponent from '../svg/SVGComponent';
+import DarkSVGComponent from '../svg/DarkSVGComponent';
 
 const Background = () => {
   const [offsetY, setOffsetY] = useState(0);
+  const { theme, systemTheme, resolvedTheme } = useTheme(); // Use resolvedTheme or systemTheme if you're using auto theme
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleScroll = () => {
-    // Calculate the offset based on the current scroll position and a parallax speed factor.
-    // The window.pageYOffset provides the number of pixels the document is currently scrolled along the vertical axis.
-    const parallaxSpeed = 0.25; // Adjust this value to control the speed of the parallax effect
+    const parallaxSpeed = 0.25;
     setOffsetY(window.pageYOffset * parallaxSpeed);
   };
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // Determine if dark mode is active
+  const isDarkMode = mounted && (theme === 'dark' || (!theme && systemTheme === 'dark') || resolvedTheme === 'dark');
 
   return (
     <div className='fixed top-0 left-0 w-full h-full z-0 overflow-hidden'>
       <div
         style={{
-          transform: `translateY(${offsetY}px)`, // Apply the dynamic offset here
-          position: 'absolute', // Changed from static to absolute to ensure it moves with the background
-          top: '-30%', // Start with the SVG slightly off-screen
+          transform: `translateY(${offsetY}px)`,
+          position: 'absolute',
+          top: '-30%',
           left: '-10%',
-          width: '120%', // Ensure the SVG is larger than the viewport
+          width: '120%',
           height: '140%',
         }}
       >
-        <SVGComponent className='w-full h-full object-cover' />
+        {/* Ensure we don't attempt to render theme-specific content until after mounting */}
+        {mounted && (
+          isDarkMode ? (
+            <DarkSVGComponent className='w-full h-full object-cover' />
+          ) : (
+            <SVGComponent className='w-full h-full object-cover' />
+          )
+        )}
       </div>
-      {/* Gradient Overlay remains unchanged */}
       <div
         style={{
-          position: 'absolute', // Ensuring overlay is correctly positioned over the SVG
+          position: 'absolute',
           top: 0,
           left: 0,
           width: '100%',
