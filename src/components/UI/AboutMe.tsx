@@ -38,7 +38,7 @@ const AboutMe = () => {
 					</div>
 				</div>
 				{/* Right Column*/}
-				<div className='flex flex-col items-center justify-self-center justify-top mt-4 space-y-4 max-w-md '>
+				<div className='flex flex-col items-center justify-self-center justify-top mt-4 space-y-4 mb-4 max-w-md '>
 					<div className='font-bold text-center text-3xl pt-6 lg:pt-0'>
 						My Skills
 					</div>
@@ -70,7 +70,7 @@ const AboutMe = () => {
 					</div>
 				</div>
 			</div>
-			<div className='lg:mb-24'></div>
+			<div className='lg:mb-28'></div>
 		</BlurSection>
 	);
 };
