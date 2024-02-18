@@ -36,3 +36,16 @@ a {
 		display: none !important;
 	}
 }
+
+:root {
+	--navbar-menu-toggle-color: #000; /* Default color */
+ }
+ 
+ [data-theme="dark"] .navbar-menu-toggle {
+	--navbar-menu-toggle-color: #fff; /* White in dark mode */
+ }
+ 
+ .navbar-menu-toggle button {
+	color: var(--navbar-menu-toggle-color);
+ }
+ 

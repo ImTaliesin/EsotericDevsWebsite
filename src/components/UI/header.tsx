@@ -9,7 +9,7 @@ import {
 	Avatar,
 	NavbarMenuItem,
 } from '@nextui-org/react';
-import DarkModeToggle from '@/components/UI/DarkMode';
+
 import { useState } from 'react';
 
 const headshotUrl = '/headshot.jpg';
@@ -39,7 +39,8 @@ export default function Header() {
 			className='flex py-3 justify-items-center dark:bg-neutral-950/95 text-black'>
 			<NavbarMenuToggle
 				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-				className='sm:hidden '
+				className='sm:hidden navbar-menu-toggle'
+				
 			/>
 			<NavbarBrand>
 				<NavbarItem className='justify-start flex '>
@@ -88,28 +89,25 @@ export default function Header() {
 						</a>
 					</button>
 				</NavbarItem>
-				<NavbarItem>
-					<DarkModeToggle />
-				</NavbarItem>
+			
 			</NavbarContent>
 
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
 					<NavbarMenuItem
+
 						key={`${item}-${index}`}
 						className='mt-6'>
 						<a
 							href={`#${item.toLowerCase()}`}
 							onClick={(e) => handleAnchorClick(e, item.toLowerCase())}
-							className='w-full text-black'
+							className='dark:text-white w-full text-black '
 							style={{ cursor: 'pointer' }}>
 							{item}
 						</a>
 					</NavbarMenuItem>
 				))}
-				<NavbarItem>
-					<DarkModeToggle />
-				</NavbarItem>
+				
 			</NavbarMenu>
 		</Navbar>
 	);
