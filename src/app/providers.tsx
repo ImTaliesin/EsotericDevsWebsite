@@ -1,5 +1,4 @@
-'use client';
-
+//use client may be needed
 import { NextUIProvider } from '@nextui-org/react';
 import { ThemeProvider } from 'next-themes'; // Import ThemeProvider
 
@@ -9,7 +8,6 @@ interface ProvidersProps {
 
 export default function Providers({ children }: ProvidersProps) {
   return (
-    // Nest NextUIProvider inside ThemeProvider
     <ThemeProvider attribute="class" enableSystem={true} defaultTheme="system">
       <NextUIProvider>
         {children}
