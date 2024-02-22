@@ -37,15 +37,11 @@ a {
 	}
 }
 
-:root {
-	--navbar-menu-toggle-color: #000; /* Default color */
- }
- 
- [data-theme="dark"] .navbar-menu-toggle {
-	--navbar-menu-toggle-color: #fff; /* White in dark mode */
- }
- 
- .navbar-menu-toggle button {
-	color: var(--navbar-menu-toggle-color);
- }
- 
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'League Spartan', sans-serif;
+}
