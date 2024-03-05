@@ -8,6 +8,7 @@ import {
 	NavbarItem,
 	Avatar,
 	NavbarMenuItem,
+	Button,
 } from '@nextui-org/react';
 
 import { useState } from 'react';
@@ -32,14 +33,13 @@ export default function Header() {
 	};
 
 	return (
-		<Navbar 
+		<Navbar
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			className='flex py-3 justify-items-center dark:bg-neutral-950/95 text-black'>
 			<NavbarMenuToggle
 				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 				className='sm:hidden navbar-menu-toggle'
-				
 			/>
 			<NavbarBrand>
 				<NavbarItem className='justify-start flex '>
@@ -59,42 +59,40 @@ export default function Header() {
 				className='hidden sm:flex gap-10'>
 				{/* Modified NavbarItems to use onClick for custom scroll behavior */}
 				<NavbarItem>
-					<button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
+					<Button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
 						<a
 							href='#about'
 							className='relative z-10'
 							onClick={(e) => handleAnchorClick(e, 'about')}>
 							About
 						</a>
-					</button>
+					</Button>
 				</NavbarItem>
 				<NavbarItem>
-					<button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
+					<Button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
 						<a
 							href='#Projects'
 							className='relative z-10'
 							onClick={(e) => handleAnchorClick(e, 'about')}>
 							Projects
 						</a>
-					</button>
+					</Button>
 				</NavbarItem>
 				<NavbarItem>
-					<button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
+					<Button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
 						<a
 							href='#Contact'
 							className='relative z-10'
 							onClick={(e) => handleAnchorClick(e, 'about')}>
 							Contact
 						</a>
-					</button>
+					</Button>
 				</NavbarItem>
-			
 			</NavbarContent>
 
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
 					<NavbarMenuItem
-
 						key={`${item}-${index}`}
 						className='mt-6'>
 						<a
@@ -106,7 +104,6 @@ export default function Header() {
 						</a>
 					</NavbarMenuItem>
 				))}
-				
 			</NavbarMenu>
 		</Navbar>
 	);
