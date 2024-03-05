@@ -14,6 +14,15 @@ div {
 	color: black; /* Light mode color */
 }
 
+* {
+	caret-color: transparent;
+}
+
+input,
+textarea {
+	caret-color: white;
+}
+
 .dark h1,
 .dark h3,
 .dark p,

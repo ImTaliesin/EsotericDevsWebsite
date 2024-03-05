@@ -7,7 +7,7 @@ export default function Projects() {
 		<BlurSection>
 			<div
 				id='Projects'
-				className='flex m-14 flex-col justify-top items-center lg:h-[45vh] h-[55vh]'>
+				className='flex m-14 flex-col justify-top items-center'>
 				<h1 className='font-sans text-4xl font-bold'>Projects</h1>
 				<div className='relative mt-4 mb-2 h-1 w-12 bg-violet-600 rounded-full'></div>
 				<div className='flex flex-col md:flex-row items-center'>
@@ -23,7 +23,7 @@ export default function Projects() {
 					<div className='md:ml-2 max-w-md mt-6 md:mt-0'>
 						<p className='text-xl text-justify'>
 							Brew Haus is a modern restaurant template built using Next.js and
-							Tailwind CSS that I designed and developed.The website showcases a
+							Tailwind CSS that I designed and developed. This website showcases a
 							responsive layout that adapts seamlessly to different screen
 							sizes, ensuring an optimal viewing experience across all desktop
 							and mobile screens.
