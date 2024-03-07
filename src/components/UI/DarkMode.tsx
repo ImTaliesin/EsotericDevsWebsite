@@ -19,11 +19,11 @@ export default function DarkModeToggle() {
     };
 
     // Optimized theme icon determination
-    const isDarkMode = theme === 'dark' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const isDarkMode = theme === 'light' || (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches);
     const ThemeIcon = isDarkMode ? <SunIcon /> : <MoonIcon />;
-
+//currently hidden and borken, dark mode is not working
     return (
-        <button onClick={toggleTheme} className="z-50 fixed lg:bottom-32 lg:right-7 bottom-28 right-2.5 flex justify-center items-center h-10 w-16 overflow-hidden transition-all duration-200 hover:text-white hover:shadow-violet-700">
+        <button onClick={toggleTheme} className="z-50 fixed lg:bottom-32 lg:right-7 bottom-28 right-2.5 hidden justify-center items-center h-10 w-16 overflow-hidden transition-all duration-200 hover:text-white hover:shadow-violet-700">
             {ThemeIcon}
         </button>
     );

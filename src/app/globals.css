@@ -11,11 +11,12 @@ div {
 	font-family: 'Playfair Display';
 	font-style: normal;
 	font-variant: normal;
-	color: black; /* Light mode color */
+	color: #FAFBFA
 }
 
 * {
 	caret-color: transparent;
+	
 }
 
 input,

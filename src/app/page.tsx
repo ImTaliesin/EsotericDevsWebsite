@@ -17,7 +17,7 @@ export default function Home() {
 				<HeroSection />
 				<div id='about'></div>
 				<AboutMe />
-				<div id='Projects' className='m-16'></div>
+				<div id='Projects' className='m-2'></div>
 				<Projects />
 				<DarkModeToggle />
 		</div>

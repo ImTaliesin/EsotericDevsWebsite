@@ -36,10 +36,10 @@ export default function Header() {
 		<Navbar
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='flex py-3 justify-items-center dark:bg-neutral-950/95 text-black'>
+			className='flex py-3 justify-items-center bg-black/90'>
 			<NavbarMenuToggle
 				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-				className='sm:hidden navbar-menu-toggle'
+				className='sm:hidden text-white'
 			/>
 			<NavbarBrand>
 				<NavbarItem className='justify-start flex '>
@@ -48,7 +48,7 @@ export default function Header() {
 						className='align-middle flex justify-center'
 						onClick={(e) => handleAnchorClick(e, 'Home')}>
 						<Avatar src={headshotUrl} />
-						<h2 className='p-2 align-middle flex justify-center text-black dark:text-white text-large'>
+						<h2 className='p-2 align-middle flex justify-center text-mytext dark:text-white text-large'>
 							Brennan D.
 						</h2>
 					</a>
@@ -59,7 +59,7 @@ export default function Header() {
 				className='hidden sm:flex gap-10'>
 				{/* Modified NavbarItems to use onClick for custom scroll behavior */}
 				<NavbarItem>
-					<Button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
+					<Button className="relative h-10 w-32 overflow-hidden rounded-3xl border border-violet-700 bg-transparent text-violet-700 shadow-md transition-all duration-300 hover:text-white hover:shadow-violet-700 hover:bg-violet-700">
 						<a
 							href='#about'
 							className='relative z-10'
@@ -69,7 +69,7 @@ export default function Header() {
 					</Button>
 				</NavbarItem>
 				<NavbarItem>
-					<Button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
+					<Button className="relative h-10 w-32 overflow-hidden rounded-3xl border border-violet-700 bg-transparent text-violet-700 shadow-md transition-all duration-300 hover:text-white hover:shadow-violet-700 hover:bg-violet-700">
 						<a
 							href='#Projects'
 							className='relative z-10'
@@ -79,7 +79,7 @@ export default function Header() {
 					</Button>
 				</NavbarItem>
 				<NavbarItem>
-					<Button className='relative h-10 w-32 overflow-hidden border rounded-3xl border-violet-700 text-violet-700 shadow-2xl transition-all duration-200 before:absolute before:inset-0 before:m-auto before:scale-0 before:rounded-full before:bg-violet-700 before:transition-transform before:duration-300 before:ease-out hover:text-white hover:shadow-violet-700 hover:before:scale-110'>
+					<Button className="relative h-10 w-32 overflow-hidden rounded-3xl border border-violet-700 bg-transparent text-violet-700 shadow-md transition-all duration-300 hover:text-white hover:shadow-violet-700 hover:bg-violet-700">
 						<a
 							href='#Contact'
 							className='relative z-10'
@@ -98,7 +98,7 @@ export default function Header() {
 						<a
 							href={`#${item.toLowerCase()}`}
 							onClick={(e) => handleAnchorClick(e, item.toLowerCase())}
-							className='dark:text-white w-full text-black '
+							className=' w-full text-black '
 							style={{ cursor: 'pointer' }}>
 							{item}
 						</a>
