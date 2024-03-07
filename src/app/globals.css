@@ -24,12 +24,6 @@ textarea {
 	caret-color: white;
 }
 
-.dark h1,
-.dark h3,
-.dark p,
-.dark div {
-	color: lightgray; /* Dark mode color */
-}
 
 
 Button,

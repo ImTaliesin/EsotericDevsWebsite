@@ -24,7 +24,7 @@ const Background = () => {
 					top: '-30%',
 					left: '-10%',
 					width: '120%',
-					height: '140%',
+					height: '240%',
 				}}>
 				<SVGComponent className='w-full h-full object-cover' />
 			</div>
