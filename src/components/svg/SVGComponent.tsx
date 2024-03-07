@@ -12,7 +12,7 @@ interface SVGComponentProps {
 const SVGComponent: React.FC<SVGComponentProps> = ({
 	color1 = '#454949', //gradient overlay color
 	color2 = '#6B5AA9',
-	color3 = '#3DA3C5',
+	color3 = '#6000FF',
 	color4 = '#95A39E',
 	color5 = '#17171C',
 	className = '',
