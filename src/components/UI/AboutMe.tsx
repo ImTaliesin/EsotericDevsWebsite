@@ -27,11 +27,10 @@ const AboutMe = () => {
 				<div className='flex flex-col items-center justify-center mx-4'>
 					<div className='text-center space-y-4 max-w-xl text-xl md:pt-5'>
 						<p>
-							I'm a web developer who loves building websites and apps that help
-							businesses succeed. I've worked on all sorts of projects, from the
-							front-end stuff you see to the back-end code that makes it all
-							work behind the scenes. You can check out some examples of what
-							I've done in the Projects section.
+							I've worked on all sorts of projects, from the front-end stuff you
+							see to the back-end code that makes it all work behind the scenes.
+							You can check out some examples of what I've done in the Projects
+							section.
 						</p>
 						<p>
 							I'm always on the lookout for new opportunities to put my skills
