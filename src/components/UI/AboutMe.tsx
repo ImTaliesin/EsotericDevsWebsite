@@ -6,36 +6,34 @@ const AboutMe = () => {
 	return (
 		<BlurSection>
 			{/* About Me Top Section */}
-			<div className='flex flex-col justify-center items-center px-4 my-16 rounded-5xl'>
-				<h1 className='font-sans text-4xl font-bold'>ABOUT ME</h1>
+			<div className='flex flex-col justify-center items-center px-4 mt-16 mb-8 rounded-5xl'>
+				<h1 className='font-sans text-4xl font-bold'>About Me</h1>
 				<div className='relative my-2 h-1 w-12 bg-violet-600 rounded-full'></div>
-				<p className='text-center max-w-2xl px-6'>
-					Here you will find more information about me, what I do, and my
-					current skills mostly in terms of programming and technology.
+				<p className='text-center max-w-lg text-lg px-6'>
+					Hi there! I'm a web developer who loves building cool stuff with code.
+					I'm always eager to learn new technologies and improve my skills. I'm
+					currently working on competitive pvp matchmaking website and discord
+					bot for Star Citizen.
 				</p>
 			</div>
 			{/* Below About Me Two Columns*/}
 			<div className='max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 mb-10 px-4'>
 				{/* Left Column*/}
-				<div className='flex flex-col justify-center items-center space-y-4'>
-					<h1 className='font-bold text-center justify-top text-3xl '>
-						Get to know me!
-					</h1>
-					<div className='text-center space-y-4 max-w-xl text-xl mx-4'>
-						<p>
-							I'm a Full Stack Web Developer building Websites and Web
-							Applications that leads to the success of your product and
-							business. Check out some of my work in the Projects section.
-						</p>
-						<p>
-							I'm open to Job opportunities where I can contribute, learn and
-							grow. If you have a good opportunity that matches my skills then
-							don't hesitate to contact me.
-						</p>
-						<Button className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'>
-							Contact
-						</Button>
-					</div>
+				<div className='flex mx-auto my-2 h-1 w-12 bg-violet-600 rounded-full justify-center'></div>
+				<div className='flex-col text-center space-y-4 max-w-xl text-xl justify-center align-middle mx-auto'>
+					<p>
+						I'm a Full Stack Web Developer building Websites and Web
+						Applications that leads to the success of your product and business.
+						Check out some of my work in the Projects section.
+					</p>
+					<p>
+						I'm open to Job opportunities where I can contribute, learn and
+						grow. If you have a good opportunity that matches my skills then
+						don't hesitate to contact me.
+					</p>
+					<Button className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'>
+						Contact
+					</Button>
 				</div>
 				{/* Right Column*/}
 				<div className='flex flex-col items-center justify-self-center justify-top mt-4 space-y-4 mb-4 max-w-md '>

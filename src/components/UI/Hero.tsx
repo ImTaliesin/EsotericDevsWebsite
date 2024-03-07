@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 
 import { Button } from '@nextui-org/react';
@@ -23,7 +24,14 @@ const HeroSection = () => {
 					</b>
 					with a flair for <i>design</i> and <CyclingWordsWords />
 				</p>
-				<Button className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'>
+				<Button
+					className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'
+					onClick={() => {
+						const targetElement = document.getElementById('Projects');
+						if (targetElement) {
+							targetElement.scrollIntoView({ behavior: 'smooth' });
+						}
+					}}>
 					Projects
 				</Button>
 			</div>
