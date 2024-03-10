@@ -21,10 +21,17 @@ div {
 
 input,
 textarea {
-	caret-color: white;
+	caret-color: black;
 }
 
+#alert {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
 
+#alert.show {
+  opacity: 1;
+}
 
 Button,
 a {

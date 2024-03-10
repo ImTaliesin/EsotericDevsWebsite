@@ -10,13 +10,19 @@ import {
 	NavbarMenuItem,
 	Button,
 } from '@nextui-org/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
 
 const headshotUrl = '/headshot.jpg';
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const { theme, setTheme } = useTheme();
 	const menuItems = ['About', 'Projects', 'Contact'];
+
+	useEffect(() => {
+		setTheme('light');
+	}, [theme, setTheme]);
 
 	const handleAnchorClick = (e: any, anchorId: string) => {
 		e.preventDefault();
@@ -47,7 +53,7 @@ export default function Header() {
 						className='align-middle flex justify-center'
 						onClick={(e) => handleAnchorClick(e, 'Home')}>
 						<Avatar src={headshotUrl} />
-						<h2 className='p-2 align-middle flex justify-center text-mytext dark:text-white text-large'>
+						<h2 className='p-2 align-middle flex justify-center text-mytext text-large'>
 							Brennan D.
 						</h2>
 					</a>
@@ -67,19 +73,20 @@ export default function Header() {
 				))}
 			</NavbarContent>
 			<NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`} className='mt-6'>
-            <a
-              href={`#${item}`}
-              onClick={(e) => handleAnchorClick(e, item)}
-              className='w-full text-black z-50'
-              style={{ cursor: 'pointer' }}
-            >
-              {item}
-            </a>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+				{menuItems.map((item, index) => (
+					<NavbarMenuItem
+						key={`${item}-${index}`}
+						className='mt-6'>
+						<a
+							href={`#${item}`}
+							onClick={(e) => handleAnchorClick(e, item)}
+							className='w-full text-black z-50'
+							style={{ cursor: 'pointer' }}>
+							{item}
+						</a>
+					</NavbarMenuItem>
+				))}
+			</NavbarMenu>
 		</Navbar>
 	);
 }
