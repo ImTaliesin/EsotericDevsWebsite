@@ -5,23 +5,27 @@ import Projects from '@/components/UI/Projects';
 import Background from '@/components/Small/backgroundSection';
 import Contact from '@/components/UI/Contact';
 
-
 export default function Home() {
 	return (
 		<div>
-			<Background/>
-				<Script
-					src='//code.tidio.co/hadhdxoc2djou3bkex3rd6tvltarcwvp.js'
-					strategy='lazyOnload'
-					async
-				/>
-				<HeroSection />
-				<div id='About'></div>
+			<Background />
+		
+			<HeroSection />
+			<div id='About'>
 				<AboutMe />
-				<div id='Projects' className='m-2'></div>
+			</div>
+
+			<div
+				id='Projects'
+				className='mt-4'>
 				<Projects />
-				<div id='Contact' className='m-2'></div>
+			</div>
+
+			<div
+				id='Contact'
+				className='mt-4'>
 				<Contact />
+			</div>
 		</div>
 	);
 }
