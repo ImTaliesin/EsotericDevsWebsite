@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import BlurSection from '@/components/Small/blurSection';
 import { Chip, Button } from '@nextui-org/react';
@@ -48,7 +48,9 @@ const AboutMe = () => {
 							got a cool project that you think I'd be a good fit for, feel free
 							to reach out and let's chat.
 						</p>
-						<Button onClick={(e) => handleAnchorClick(e, 'Contact')} className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'>
+						<Button
+							onClick={(e) => handleAnchorClick(e, 'Contact')}
+							className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'>
 							Contact
 						</Button>
 					</div>
@@ -76,11 +78,12 @@ const AboutMe = () => {
 							NextJS
 						</Chip>
 						<Chip className='bg-neutral-800 text-white rounded-lg text-xl px-2 py-4'>
-							GIT
+							NodeJS
 						</Chip>
 						<Chip className='bg-neutral-800 text-white rounded-lg text-xl px-2 py-4'>
-							Github
+							GIT
 						</Chip>
+
 						<Chip className='bg-neutral-800 text-white rounded-lg text-xl px-2 py-4'>
 							SEO
 						</Chip>
