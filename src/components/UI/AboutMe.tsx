@@ -1,7 +1,17 @@
+'use client'
 import React from 'react';
 import BlurSection from '@/components/Small/blurSection';
 import { Chip, Button } from '@nextui-org/react';
-
+const handleAnchorClick = (e: any, anchorId: string) => {
+	e.preventDefault();
+	const element = document.getElementById(anchorId);
+	if (element) {
+		element.scrollIntoView({
+			behavior: 'smooth',
+			block: 'start',
+		});
+	}
+};
 const AboutMe = () => {
 	return (
 		<BlurSection>
@@ -38,7 +48,7 @@ const AboutMe = () => {
 							got a cool project that you think I'd be a good fit for, feel free
 							to reach out and let's chat.
 						</p>
-						<Button className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'>
+						<Button onClick={(e) => handleAnchorClick(e, 'Contact')} className='w-52 py-6 shadow-gray-600 shadow-lg bg-violet-700 text-white rounded text-2xl'>
 							Contact
 						</Button>
 					</div>
