@@ -1,13 +1,10 @@
 'use client';
 import {
 	Navbar,
-	NavbarMenu,
-	NavbarMenuToggle,
 	NavbarBrand,
 	NavbarContent,
 	NavbarItem,
 	Avatar,
-	NavbarMenuItem,
 	Button,
 } from '@nextui-org/react';
 import { useState, useEffect } from 'react';
@@ -42,10 +39,6 @@ export default function Header() {
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			className='flex py-3 justify-items-center bg-black/90'>
-			<NavbarMenuToggle
-				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-				className='sm:hidden text-white'
-			/>
 			<NavbarBrand>
 				<NavbarItem className='justify-start flex '>
 					<a
@@ -72,21 +65,6 @@ export default function Header() {
 					</NavbarItem>
 				))}
 			</NavbarContent>
-			<NavbarMenu>
-				{menuItems.map((item, index) => (
-					<NavbarMenuItem
-						key={`${item}-${index}`}
-						className='mt-6'>
-						<a
-							href={`#${item}`}
-							onClick={(e) => handleAnchorClick(e, item)}
-							className='w-full text-black z-50'
-							style={{ cursor: 'pointer' }}>
-							{item}
-						</a>
-					</NavbarMenuItem>
-				))}
-			</NavbarMenu>
 		</Navbar>
 	);
 }
