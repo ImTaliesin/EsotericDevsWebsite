@@ -1,6 +1,5 @@
 import AboutMe from '@/components/UI/AboutMe';
 import HeroSection from '@/components/UI/Hero';
-import Script from 'next/script';
 import Projects from '@/components/UI/Projects';
 import Background from '@/components/Small/backgroundSection';
 import Contact from '@/components/UI/Contact';
@@ -9,7 +8,7 @@ export default function Home() {
 	return (
 		<div>
 			<Background />
-		
+
 			<HeroSection />
 			<div id='About'>
 				<AboutMe />
