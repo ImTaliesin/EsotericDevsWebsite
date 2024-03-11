@@ -23,8 +23,6 @@ export default function Header() {
 
 	const handleAnchorClick = (e: any, anchorId: string) => {
 		e.preventDefault();
-		// Close the menu
-		setIsMenuOpen(false);
 		const element = document.getElementById(anchorId);
 		if (element) {
 			element.scrollIntoView({
