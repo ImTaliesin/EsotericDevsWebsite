@@ -33,10 +33,10 @@ export default function Projects() {
 				</div>
 				{/* Store Citizen */}
 				<div className='flex flex-col md:flex-row items-center mt-8'>
-					<Link href='https://talie-restaurant-template.vercel.app/'>
+					<Link href='https://chromewebstore.google.com/detail/store-citizen/kedcjkkkabjjhbadhabaikbpcdodhopl?pli=1'>
 						<Image
 							alt='Laptop Image'
-							src='/BrewHausLaptop.png'
+							src='/StoreCitizenLaptop.png'
 							width={500}
 							height={300}
 							className='flex-1'
