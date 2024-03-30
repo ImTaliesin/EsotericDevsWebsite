@@ -4,7 +4,7 @@ interface SectionProps {
  
  export default function BlurSection({ children }: SectionProps) {
 	return (
-	  <div className="relative overflow-hidden dark:rounded-none">
+	  <div className="relative overflow-hidden ">
 		 <div className={`flex mx-auto w-full h-full absolute inset-0 z-1 bg-black/70 `}>
 		 </div>
 		 {/* Content with adjusted text color for dark mode */}

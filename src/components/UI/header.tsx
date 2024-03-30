@@ -36,7 +36,7 @@ export default function Header() {
 		<Navbar
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			className='flex py-3 justify-items-center bg-black/90'>
+			className='flex py-3 justify-items-center bg-neutral-950/50'>
 			<NavbarBrand>
 				<NavbarItem className='justify-start flex '>
 					<a
