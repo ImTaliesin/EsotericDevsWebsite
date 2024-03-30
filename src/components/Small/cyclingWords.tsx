@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect } from 'react';
 
-const words = ['efficiency.',  'performance.', 'optimization.', 'responsiveness.', 'security.'];
+const words = ['efficiency.',  'performance.', 'optimization.', 'security.'];
 
 // This component initializes with the first word server-side but relies on client-side JS for cycling
 const CyclingWords = () => {

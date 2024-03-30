@@ -11,7 +11,7 @@ div {
 	font-family: 'Playfair Display';
 	font-style: normal;
 	font-variant: normal;
-	color: #FAFBFA
+	color:white
 }
 
 * {
@@ -55,4 +55,13 @@ a {
 body {
   margin: 0;
   font-family: 'League Spartan', sans-serif;
+}
+
+.bg-gradient {
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+}
+
+.bg-gradient {
+  --color-bg1: rgba(0, 0, 1, 0.865);
+  --color-bg2: rgb(5, 41, 186);
 }
