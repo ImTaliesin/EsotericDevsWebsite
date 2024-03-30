@@ -56,7 +56,7 @@ export default function Header() {
 				{menuItems.map((item, index) => (
 					<NavbarItem key={`${item}-${index}`}>
 						<Button
-							className='relative h-10 w-32 overflow-hidden rounded-3xl border border-violet-700 bg-transparent text-violet-700 shadow-md transition-all duration-300 hover:text-white hover:shadow-violet-700 hover:bg-violet-700'
+							className='relative h-10 w-32 overflow-hidden rounded-3xl border border-violet-700 bg-transparent shadow-md transition-all duration-300 text-white shadow-violet-700 bg-violet-700'
 							onClick={(e) => handleAnchorClick(e, item)}>
 							{item}
 						</Button>
