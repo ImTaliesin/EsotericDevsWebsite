@@ -7,13 +7,14 @@ import CyclingWordsWords from '@/components/Small/cyclingWords';
 const HeroSection = () => {
 	return (
 		<div
-		id='Home' className='z-10 relative flex justify-center items-center lg:h-[80vh] h-[70vh]'>
+			id='Home'
+			className='z-10 relative flex justify-center items-center lg:h-[80vh] h-[70vh]'>
 			<div className='flex flex-col items-center justify-center m-auto space-y-4  max-w-xl px-4'>
-				<h2 className='text-8xl pb-1 font-extrabold text-center text-neutral-900/20 [-webkit-text-stroke:_1px_black]'>
+				<h2 className='text-8xl pb-1 font-extrabold text-center text-neutral-200 '>
 					Hey, I'm Brennan
 				</h2>
 
-				<p className='text-center text-2xl p-4 text-neutral-950'>
+				<p className='text-center text-2xl p-4 text-neutral-200'>
 					I'm a <i>pragmatic</i> <b>Full-Stack Web Developer</b> building{' '}
 					<b>Websites</b> and <b>Applications </b>
 					that bring

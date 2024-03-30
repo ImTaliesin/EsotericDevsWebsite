@@ -10,22 +10,35 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
-			backgroundImage: {
-				
-			},colors: {
+			backgroundImage: {},
+			colors: {
 				mybg: '#191919',
 				mytext: '#FAFBFA',
-				'bg-1': 'rgba(0, 0, 1, 0.865)',
-        'bg-2': 'rgba(10, 17, 21, .9)',
-				
+				'bg-1': 'rgba(0, 0, 0, 1)',
+				'bg-2': 'rgba(0, 0, 5, 1)',
 			},
 			fontFamily: {
-				sans: ['Playfair Display', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji']
+				sans: [
+					'Playfair Display',
+					'ui-sans-serif',
+					'system-ui',
+					'-apple-system',
+					'BlinkMacSystemFont',
+					'Segoe UI',
+					'Roboto',
+					'Helvetica Neue',
+					'Arial',
+					'Noto Sans',
+					'sans-serif',
+					'Apple Color Emoji',
+					'Segoe UI Emoji',
+					'Segoe UI Symbol',
+					'Noto Color Emoji',
+				],
 			},
 		},
 	},
 	darkMode: 'class',
 	plugins: [nextui()],
-	
 };
 export default config;
