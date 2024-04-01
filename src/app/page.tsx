@@ -10,25 +10,26 @@ export default function Home() {
 		<div>
 			<Background />
 			<HeroSection />
-			<div  className='bg-neutral-950'><div id='About'>
-				<AboutMe />
-			</div>
+			<div className='bg-neutral-950'>
+				<div id='About'>
+					<AboutMe />
+				</div>
 
-			<div
-				id='Projects'
-				className='mt-4'>
-				<Projects />
-			</div>
+				<div
+					id='Projects'
+					className='mt-4'>
+					<Projects />
+				</div>
 
-			<div
-				id='Contact'
-				className='mt-4'>
-				<Contact />
+				<div
+					id='Contact'
+					className='mt-4'>
+					<Contact />
+				</div>
+				<div>
+					<Footer />
+				</div>
 			</div>
-			<div>
-				<Footer />
-			</div></div>
-			
 		</div>
 	);
 }
