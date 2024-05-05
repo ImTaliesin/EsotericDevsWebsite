@@ -14,9 +14,8 @@ div {
 	color:white
 }
 
-* {
-	caret-color: transparent;
-	
+:root {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 input,
