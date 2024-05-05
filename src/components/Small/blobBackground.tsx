@@ -39,7 +39,7 @@ const BlobBackground: React.FC<BlobBackgroundProps> = ({ className = '', ...prop
     };
   }, []);
 
-  return <div className={`interactive ${className}`} ref={interBubbleRef} {...props} />;
+  return <div className={`interactive z-10 ${className}`} ref={interBubbleRef} {...props} />;
 };
 
 export default BlobBackground;
