@@ -2,7 +2,7 @@
 import React from 'react';
 import BlurSection from '@/components/Small/blurSection';
 import { Chip, Button } from '@nextui-org/react';
-
+import Reveal from '@/components/UI/Reveal';
 const handleAnchorClick = (e: any, anchorId: string) => {
   e.preventDefault();
   const element = document.getElementById(anchorId);
@@ -16,6 +16,7 @@ const AboutMe = () => {
     <BlurSection>
       {/* About Me Top Section */}
       <div className='flex flex-col justify-center items-center px-4 pt-12 mb-8 rounded-5xl'>
+        
         <h1 className='font-sans text-4xl font-bold'>About Me</h1>
         <div className='relative my-2 h-1 w-12 bg-violet-600 rounded-full'></div>
         <p className='text-center max-w-lg text-lg px-6'>
