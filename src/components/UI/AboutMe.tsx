@@ -19,17 +19,18 @@ const AboutMe = () => {
 					About Me
 				</h1>
 
-				<div className='bg-neutral-900 rounded-lg p-6 mb-8 shadow-lg'>
+				<div className='bg-indigo-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 border border-gray-100/30
+ p-6 mb-8 shadow-lg'>
 					<p className='text-lg leading-relaxed'>
 						Hi there! I'm a web developer who loves building cool stuff with
 						code. I'm always eager to learn new technologies and improve my
-						skills. Currently, I'm working on a competitive pvp matchmaking
-						website and discord bot for Star Citizen.
+						skills. I'm currently working on a website for a new animation studio.
 					</p>
 				</div>
 
 				<div className='grid md:grid-cols-2 gap-8 mb-8'>
-					<div className='bg-neutral-900 rounded-lg p-6 shadow-lg'>
+					<div className='bg-indigo-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 border border-gray-100/30
+ p-6 shadow-lg'>
 						<h2 className='text-2xl font-semibold mb-4'>Experience</h2>
 						<p className='text-lg leading-relaxed'>
 							I've worked on all sorts of projects, from front-end interfaces to
@@ -38,7 +39,8 @@ const AboutMe = () => {
 							Check out my Projects section for examples of my work.
 						</p>
 					</div>
-					<div className='bg-neutral-900 rounded-lg p-6 shadow-lg'>
+					<div className='bg-indigo-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 border border-gray-100/30
+ p-6 shadow-lg'>
 						<h2 className='text-2xl font-semibold mb-4'>Aspirations</h2>
 						<p className='text-lg leading-relaxed'>
 							I'm always on the lookout for new opportunities to apply my
@@ -49,9 +51,12 @@ const AboutMe = () => {
 					</div>
 				</div>
 
-				<div className='bg-neutral-900 rounded-lg p-6 shadow-lg mb-8'>
+				<div className='bg-indigo-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 border border-gray-100/30
+ p-6 shadow-lg mb-8'>
 					<h2 className='text-2xl font-semibold mb-4 text-center'>My Skills</h2>
 					<div className='flex flex-wrap justify-center gap-3'>
+
+						{/*TODO: Change array to photo carousel */}
 						{[
 							'HTML',
 							'CSS',
