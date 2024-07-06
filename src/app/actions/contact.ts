@@ -1,13 +1,13 @@
 'use server';
 import { z } from 'zod';
-import sendgrid from '@sendgrid/mail';
+import { Resend } from 'resend';
 import { cookies } from 'next/headers';
+import EmailTemplate from '@/components/UI/EmailTemplate'; // Adjust the import path as needed
+import { ReactElement } from 'react';
 
-const sendgridApiKey = process.env.SENDGRID_API_KEY as string;
-const senderEmail = 'Taliesin@esotericdevs.com';
+const resend = new Resend(process.env.RESEND_API_KEY);
+const senderEmail = 'onboarding@resend.dev';
 const recipientEmail = 'brennanjdouglas@gmail.com';
-
-sendgrid.setApiKey(sendgridApiKey);
 
 const contactFormSchema = z.object({
   businessName: z.string().optional(),
@@ -42,10 +42,10 @@ export async function contactAction(
   }
 
   const result = contactFormSchema.safeParse({
-    businessName: formData.get('businessName') as string,
-    name: formData.get('name') as string,
-    email: formData.get('email') as string,
-    message: formData.get('message') as string,
+    businessName: formData.get('businessName'),
+    name: formData.get('name'),
+    email: formData.get('email'),
+    message: formData.get('message'),
   });
 
   if (!result.success) {
@@ -54,25 +54,25 @@ export async function contactAction(
   }
 
   try {
-    // Send email using SendGrid
-    const emailData = {
-      to: recipientEmail,
+    const { data, error } = await resend.emails.send({
       from: senderEmail,
+      to: recipientEmail,
       subject: 'New Contact Form Submission',
-      text: `New contact form submission:
-      Business Name: ${result.data.businessName || 'N/A'}
-      Name: ${result.data.name}
-      Email: ${result.data.email}
-      Message: ${result.data.message}`,
-    };
+      react: EmailTemplate(result.data) as ReactElement,
+      text: `New message from ${result.data.name} (${result.data.email}): ${result.data.message}`,
+    });
 
-    await sendgrid.send(emailData);
-    console.log('Email sent successfully:', emailData);
+    if (error) {
+      console.error('Error sending email:', error);
+      return { errors: { _form: [error.message] } };
+    }
+
+    console.log('Email sent successfully:', data);
 
     cookieStore.set('hasSentMessage', 'true', { maxAge: 60 * 60 * 24 * 365 });
 
     return { errors: {} };
-  } catch (error: unknown) {
+  } catch (error) {
     console.error('Error sending email:', error);
     if (error instanceof Error) {
       console.error('Error details:', error.message);
