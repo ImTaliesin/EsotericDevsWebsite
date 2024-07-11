@@ -21,13 +21,17 @@ export default function Header() {
 		setTheme('light');
 	}, [theme, setTheme]);
 
-	const handleAnchorClick = (e: any, anchorId: string) => {
+	const handleAnchorClick = (e: React.MouseEvent, anchorId: string) => {
 		e.preventDefault();
 		const element = document.getElementById(anchorId);
 		if (element) {
-			element.scrollIntoView({
-				behavior: 'smooth',
-				block: 'start',
+			const headerHeight = 35; // Adjust this value if needed
+			const elementPosition = element.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.scrollY - headerHeight;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: 'smooth'
 			});
 		}
 	};
