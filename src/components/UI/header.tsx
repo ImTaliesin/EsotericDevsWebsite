@@ -25,7 +25,7 @@ export default function Header() {
 		e.preventDefault();
 		const element = document.getElementById(anchorId);
 		if (element) {
-			const headerHeight = 35; // Adjust this value if needed
+			const headerHeight = 36; // Adjust this value if needed
 			const elementPosition = element.getBoundingClientRect().top;
 			const offsetPosition = elementPosition + window.scrollY - headerHeight;
 
