@@ -1,56 +1,96 @@
 'use client';
 import './style.scss';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface BlobBackgroundProps {
-	className?: string;
+    className?: string;
 }
 
 const BlobBackground: React.FC<BlobBackgroundProps> = ({
-	className = '',
-	...props
+    className = '',
+    ...props
 }) => {
-	const interBubbleRef = useRef<HTMLDivElement>(null);
+    const interBubbleRef = useRef<HTMLDivElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
-	useEffect(() => {
-		let curX = 0;
-		let curY = 0;
-		let tgX = 0;
-		let tgY = 0;
+    useEffect(() => {
+        const updateDimensions = () => {
+            if (containerRef.current) {
+                setDimensions({
+                    width: containerRef.current.offsetWidth,
+                    height: containerRef.current.offsetHeight
+                });
+            }
+        };
 
-		const move = () => {
-			curX += (tgX - curX) / 20;
-			curY += (tgY - curY) / 20;
+        updateDimensions();
+        window.addEventListener('resize', updateDimensions);
 
-			if (interBubbleRef.current) {
-				interBubbleRef.current.style.transform = `translate(${Math.round(
-					curX
-				)}px, ${Math.round(curY)}px)`;
-			}
+        return () => window.removeEventListener('resize', updateDimensions);
+    }, []);
 
-			requestAnimationFrame(move);
-		};
+    useEffect(() => {
+        let curX = dimensions.width / 2;
+        let curY = dimensions.height / 2;
+        let tgX = curX;
+        let tgY = curY;
 
-		const handleMouseMove = (event: MouseEvent) => {
-			tgX = event.clientX;
-			tgY = event.clientY;
-		};
+        const move = () => {
+            curX += (tgX - curX) / 20;
+            curY += (tgY - curY) / 20;
 
-		window.addEventListener('mousemove', handleMouseMove);
-		move();
+            if (interBubbleRef.current) {
+                interBubbleRef.current.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+            }
 
-		return () => {
-			window.removeEventListener('mousemove', handleMouseMove);
-		};
-	}, []);
+            requestAnimationFrame(move);
+        };
 
-	return (
-		<div
-			className={`interactive z-10 ${className}`}
-			ref={interBubbleRef}
-			{...props}
-		/>
-	);
+        const handleMouseMove = (event: MouseEvent) => {
+            if (containerRef.current) {
+                const rect = containerRef.current.getBoundingClientRect();
+                tgX = event.clientX - rect.left;
+                tgY = event.clientY - rect.top;
+            }
+        };
+
+        const container = containerRef.current;
+        if (container) {
+            container.addEventListener('mousemove', handleMouseMove);
+            move();
+        }
+
+        return () => {
+            if (container) {
+                container.removeEventListener('mousemove', handleMouseMove);
+            }
+        };
+    }, [dimensions]);
+
+    return (
+        <div
+            className={`gradient-bg ${className}`}
+            ref={containerRef}
+            {...props}
+        >
+            <div className="gradients-container">
+                <div className="g1" />
+                <div className="g2" />
+                <div className="g3" />
+                <div className="g4" />
+                <div className="g5" />
+                <div className="g6" />
+                <div className="g7" />
+                <div className="g8" />
+                <div
+                    className="interactive"
+                    ref={interBubbleRef}
+                    style={{ width: '150px', height: '150px' }}
+                />
+            </div>
+        </div>
+    );
 };
 
 export default BlobBackground;

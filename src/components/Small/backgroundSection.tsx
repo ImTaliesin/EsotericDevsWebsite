@@ -1,3 +1,4 @@
+"use client"
 import BlobBackground from '@components/Small/blobBackground';
 
 const Background = () => {
